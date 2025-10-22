@@ -1,0 +1,143 @@
+.announce {
+  padding-bottom: 30px;
+}
+
+/* .conference {} */
+.conference__content {
+  padding: 24px 0px;
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+}
+.conference__items {
+  position: relative;
+  z-index: 1;
+
+  max-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  column-gap: 50px;
+  row-gap: 14px;
+}
+.conference-item {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+  color: var(--white);
+
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.conference-item:nth-child(1),
+.conference-item:nth-child(2) {
+  max-width: 220px;
+}
+.conference-item:nth-child(3),
+.conference-item:nth-child(4) {
+  max-width: 260px;
+}
+.conference-item:nth-child(5),
+.conference-item:nth-child(6) {
+  max-width: 200px;
+}
+.conference__decor {
+  position: absolute;
+  top: -10px;
+  left: -40px;
+}
+@media (max-width: 500px) {
+  .conference__content {
+    padding-top: 134px;
+    padding-bottom: 0px;
+  }
+  .conference__items {
+    max-height: none;
+    width: 100%;
+    padding-left: 20px;
+  }
+  .conference-item:nth-child(n) {
+    max-width: 100%;
+  }
+  .conference__decor {
+    max-height: 110px;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/* .audience {} */
+.audience__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 4px;
+}
+.audience-item {
+  --icon-size: 36px;
+
+  padding: 18px 24px;
+  border-radius: 24px;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(to right, #49511F 0%, #262626 65%);
+}
+.audience-item__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.4px;
+  font-style: oblique;
+  color: var(--white);
+}
+.audience-item__icon {
+  flex: 0 0 var(--icon-size);
+  height: var(--icon-size);
+  width: var(--icon-size);
+
+  display: block;
+  position: relative;
+}
+.audience-item__icon::before {
+  content: '';
+
+  width: 100%;
+  height: 0%;
+  border: 1px solid var(--accent-color);
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.audience-item__icon::after {
+  content: '';
+
+  width: 0%;
+  height: 100%;
+  border: 1px solid var(--accent-color);
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+@media (max-width: 500px) {
+  .audience__items {
+    grid-template-columns: 1fr;
+  }
+  .audience-item {
+    padding: 20px 24px;
+  }
+  .audience-item__title {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+}
