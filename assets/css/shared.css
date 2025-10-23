@@ -236,7 +236,9 @@ body {
 }
 .tabs__link {
   flex: 0 0 110px;
+
   padding: 14px;
+  border-radius: 12px;
 
   display: flex;
   align-items: center;
@@ -258,8 +260,6 @@ body {
 .tabs__link.active {
   background-color: var(--accent-color);
   color: var(--black);
-
-  border-radius: 12px;
   opacity: 1;
 }
 .tabs__pages {
