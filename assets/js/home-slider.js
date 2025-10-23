@@ -12,5 +12,7 @@
     spaceBetween: 4,
     // allow grabbing
     grabCursor: true,
+    // circular scrolling
+    loop: true,
   })
 })()
