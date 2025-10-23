@@ -221,6 +221,9 @@ body {
 
 /* tabs */
 .tabs {
+  width: 100%;
+}
+.tabs__links {
   width: fit-content;
   padding: 4px;
 
@@ -258,6 +261,12 @@ body {
 
   border-radius: 12px;
   opacity: 1;
+}
+.tabs__pages {
+  width: 100%;
+}
+.tabs__page:not(.active) {
+  display: none;
 }
 
 /* footer */

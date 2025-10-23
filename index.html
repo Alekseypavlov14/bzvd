@@ -168,113 +168,319 @@
 
     <!-- Block with schedule -->
     <section class="section schedule">
-      <div class="container">
+      <div data-tabs class="container tabs">
         <div class="schedule__header">
           <h2 class="section__title">Расписание</h2>
 
-          <div class="tabs">
-            <a href="#" class="tabs__link">Зал 1</a>
-            <a href="#" class="tabs__link">Зал 2</a>
-            <a href="#" class="tabs__link active">Зал 3</a>
+          <div class="tabs__links">
+            <a href="#" data-tabs-link class="tabs__link">Зал 1</a>
+            <a href="#" data-tabs-link class="tabs__link">Зал 2</a>
+            <a href="#" data-tabs-link class="tabs__link active">Зал 3</a>
           </div>
         </div>
 
-        <div class="schedule__content">
-          <div id="schedule-slider" class="swiper schedule__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide schedule-slide">
-                <div class="schedule-slide__title">10:00-11:30</div>
-                <div class="schedule-slide__subtitle">
-                  Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
-                  конкуренции за внимание аудитории?
-                </div>
-                <div class="schedule-slide__body">
-                  <div class="schedule-slide__author">
-                    <div class="schedule-slide__avatar">
-                      <img src="./assets/img/speaker-1.webp" alt="Ольга Курлович">
+        <div class="tabs__pages schedule__tabs">
+          <div data-tabs-page class="tabs__page">
+            <div class="schedule__content">
+              <div id="schedule-slider" class="swiper schedule__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">10:00-11:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
+                      конкуренции за внимание аудитории?
                     </div>
-                    <div class="schedule-slide__roles">
-                      <div class="schedule-slide__role">Ольга Курлович</div>
-                      <div class="schedule-slide__role">CEO</div>
-                      <div class="schedule-slide__role">OJ Group</div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-1.webp" alt="Ольга Курлович">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Ольга Курлович</div>
+                          <div class="schedule-slide__role">CEO</div>
+                          <div class="schedule-slide__role">OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
                     </div>
                   </div>
-                  <div class="schedule-slide__company">
-                    <img src="./assets/img/oj-group.webp" alt="" srcset="">
-                  </div>
-                </div>
-              </div>
 
-              <div class="swiper-slide schedule-slide schedule-slide--decor-top-right">
-                <div class="schedule-slide__title">12:00-13:30</div>
-                <div class="schedule-slide__subtitle">
-                  Направо пойдешь – Instagram найдешь, налево пойдешь – хейт в Threads найдешь. Куда идти
-                  брендам с digital коммуникацией в 2026 году?
-                </div>
-                <div class="schedule-slide__body">
-                  <div class="schedule-slide__author">
-                    <div class="schedule-slide__avatar">
-                      <img src="./assets/img/speaker-2.webp" alt="Евгения Ляткевич">
+                  <div class="swiper-slide schedule-slide schedule-slide--decor-top-right">
+                    <div class="schedule-slide__title">12:00-13:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Направо пойдешь – Instagram найдешь, налево пойдешь – хейт в Threads найдешь. Куда идти
+                      брендам с digital коммуникацией в 2026 году?
                     </div>
-                    <div class="schedule-slide__roles">
-                      <div class="schedule-slide__role">Евгения Ляткевич</div>
-                      <div class="schedule-slide__role">Executive Director</div>
-                      <div class="schedule-slide__role">co-founder OJ Group</div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-2.webp" alt="Евгения Ляткевич">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Евгения Ляткевич</div>
+                          <div class="schedule-slide__role">Executive Director</div>
+                          <div class="schedule-slide__role">co-founder OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
                     </div>
                   </div>
-                  <div class="schedule-slide__company">
-                    <img src="./assets/img/oj-group.webp" alt="" srcset="">
-                  </div>
-                </div>
-              </div>
 
-              <div class="swiper-slide schedule-slide">
-                <div class="schedule-slide__title">16:00-17:30</div>
-                <div class="schedule-slide__subtitle">
-                  Гибридный маркетинг. Как онлайн и офлайн усиливают друг друга и создают мощную коммуникацию.
-                </div>
-                <div class="schedule-slide__body">
-                  <div class="schedule-slide__author">
-                    <div class="schedule-slide__avatar">
-                      <img src="./assets/img/speaker-3.webp" alt="Полина Холяво">
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">16:00-17:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Гибридный маркетинг. Как онлайн и офлайн усиливают друг друга и создают мощную коммуникацию.
                     </div>
-                    <div class="schedule-slide__roles">
-                      <div class="schedule-slide__role">Полина Холяво</div>
-                      <div class="schedule-slide__role">Head of Production</div>
-                      <div class="schedule-slide__role">Department OJ Group</div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-3.webp" alt="Полина Холяво">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Полина Холяво</div>
+                          <div class="schedule-slide__role">Head of Production</div>
+                          <div class="schedule-slide__role">Department OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
                     </div>
                   </div>
-                  <div class="schedule-slide__company">
-                    <img src="./assets/img/oj-group.webp" alt="" srcset="">
-                  </div>
-                </div>
-              </div>
 
-              <div class="swiper-slide schedule-slide">
-                <div class="schedule-slide__title">18:00-19:00</div>
-                <div class="schedule-slide__subtitle">
-                  Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
-                  конкуренции за внимание аудитории?
-                </div>
-                <div class="schedule-slide__body">
-                  <div class="schedule-slide__author">
-                    <div class="schedule-slide__avatar">
-                      <img src="./assets/img/speaker-4.webp" alt="Денис Василевич">
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">18:00-19:00</div>
+                    <div class="schedule-slide__subtitle">
+                      Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
+                      конкуренции за внимание аудитории?
                     </div>
-                    <div class="schedule-slide__roles">
-                      <div class="schedule-slide__role">Денис Василевич</div>
-                      <div class="schedule-slide__role">Head of Event/ BTL</div>
-                      <div class="schedule-slide__role">Department OJ Group</div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-4.webp" alt="Денис Василевич">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Денис Василевич</div>
+                          <div class="schedule-slide__role">Head of Event/ BTL</div>
+                          <div class="schedule-slide__role">Department OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
                     </div>
                   </div>
-                  <div class="schedule-slide__company">
-                    <img src="./assets/img/oj-group.webp" alt="" srcset="">
-                  </div>
                 </div>
+
+                <div class="swiper-pagination"></div>
               </div>
             </div>
+          </div>
 
-            <div class="swiper-pagination"></div>
+          <div data-tabs-page class="tabs__page">
+            <div class="schedule__content">
+              <div id="schedule-slider" class="swiper schedule__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">10:00-11:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
+                      конкуренции за внимание аудитории?
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-1.webp" alt="Ольга Курлович">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Ольга Курлович</div>
+                          <div class="schedule-slide__role">CEO</div>
+                          <div class="schedule-slide__role">OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide schedule-slide schedule-slide--decor-top-right">
+                    <div class="schedule-slide__title">12:00-13:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Направо пойдешь – Instagram найдешь, налево пойдешь – хейт в Threads найдешь. Куда идти
+                      брендам с digital коммуникацией в 2026 году?
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-2.webp" alt="Евгения Ляткевич">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Евгения Ляткевич</div>
+                          <div class="schedule-slide__role">Executive Director</div>
+                          <div class="schedule-slide__role">co-founder OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">16:00-17:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Гибридный маркетинг. Как онлайн и офлайн усиливают друг друга и создают мощную коммуникацию.
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-3.webp" alt="Полина Холяво">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Полина Холяво</div>
+                          <div class="schedule-slide__role">Head of Production</div>
+                          <div class="schedule-slide__role">Department OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">18:00-19:00</div>
+                    <div class="schedule-slide__subtitle">
+                      Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
+                      конкуренции за внимание аудитории?
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-4.webp" alt="Денис Василевич">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Денис Василевич</div>
+                          <div class="schedule-slide__role">Head of Event/ BTL</div>
+                          <div class="schedule-slide__role">Department OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+
+          <div data-tabs-page class="tabs__page active">
+            <div class="schedule__content">
+              <div id="schedule-slider" class="swiper schedule__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">10:00-11:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
+                      конкуренции за внимание аудитории?
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-1.webp" alt="Ольга Курлович">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Ольга Курлович</div>
+                          <div class="schedule-slide__role">CEO</div>
+                          <div class="schedule-slide__role">OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide schedule-slide schedule-slide--decor-top-right">
+                    <div class="schedule-slide__title">12:00-13:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Направо пойдешь – Instagram найдешь, налево пойдешь – хейт в Threads найдешь. Куда идти
+                      брендам с digital коммуникацией в 2026 году?
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-2.webp" alt="Евгения Ляткевич">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Евгения Ляткевич</div>
+                          <div class="schedule-slide__role">Executive Director</div>
+                          <div class="schedule-slide__role">co-founder OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">16:00-17:30</div>
+                    <div class="schedule-slide__subtitle">
+                      Гибридный маркетинг. Как онлайн и офлайн усиливают друг друга и создают мощную коммуникацию.
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-3.webp" alt="Полина Холяво">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Полина Холяво</div>
+                          <div class="schedule-slide__role">Head of Production</div>
+                          <div class="schedule-slide__role">Department OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide schedule-slide">
+                    <div class="schedule-slide__title">18:00-19:00</div>
+                    <div class="schedule-slide__subtitle">
+                      Инфлюенс-маркетинг 2026: как брендам выделиться со своей коммуникацией в условии жесткой
+                      конкуренции за внимание аудитории?
+                    </div>
+                    <div class="schedule-slide__body">
+                      <div class="schedule-slide__author">
+                        <div class="schedule-slide__avatar">
+                          <img src="./assets/img/speaker-4.webp" alt="Денис Василевич">
+                        </div>
+                        <div class="schedule-slide__roles">
+                          <div class="schedule-slide__role">Денис Василевич</div>
+                          <div class="schedule-slide__role">Head of Event/ BTL</div>
+                          <div class="schedule-slide__role">Department OJ Group</div>
+                        </div>
+                      </div>
+                      <div class="schedule-slide__company">
+                        <img src="./assets/img/oj-group.webp" alt="" srcset="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -326,6 +532,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./assets/js/home-slider.js"></script>
+    <script src="./assets/js/tabs.js"></script>
   </div>
 </body>
 
