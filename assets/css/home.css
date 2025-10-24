@@ -333,7 +333,7 @@
 }
 .speakers__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 220px);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 32px;
 }
 .speaker-card {
@@ -370,6 +370,25 @@
   line-height: 1.2;
   letter-spacing: -0.4px;
   color: var(--dark-500);
+}
+@media (max-width: 500px) {
+  .speakers__grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    column-gap: 10px;
+    row-gap: 40px;
+  }
+  .speaker-card {
+    --avatar-size: 160px;
+  }
+  .speaker-card__name,
+  .speaker-card__role {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+  .speaker-card__role br {
+    display: none;
+  }
 }
 
 /* partners */
