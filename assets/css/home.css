@@ -445,10 +445,42 @@
 .partners__logo-caption {
   margin-top: 25px;
 
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
   font-size: 18px;
   line-height: 1.1;
   letter-spacing: -0.4px;
   color: var(--white);
+}
+@media (max-width: 500px) {
+  .partners__block {
+    padding: 18px 20px 50px 20px;
+  }
+  .partners__block-title {
+    font-size: 22px;
+  }
+  .partners__primary-logo {
+    margin-top: 28px;
+    max-height: 48px;
+  }
+  .partners__description-title {
+    margin-top: 26px;
+  }
+  .partners__description-text {
+    margin-top: 10px;
+  }
+  .partners__logos {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .partners__block:last-child .partners__logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* tariffs */
