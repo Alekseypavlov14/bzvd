@@ -45,20 +45,20 @@
     <!-- Block with timer -->
     <section class="section announce">
       <div class="container">
-        <div class="timer">
+        <div data-timer data-timer-moment="2025-11-24T22:00:00.000Z" class="timer">
           <div class="timer__content">
             <div class="timer__block">
               <div class="timer__block-digits">
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">2</div>
+                  <div data-timer-days-1 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">4</div>
+                  <div data-timer-days-2 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
               </div>
@@ -70,13 +70,13 @@
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">0</div>
+                  <div data-timer-hours-1 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">7</div>
+                  <div data-timer-hours-2 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
               </div>
@@ -88,13 +88,13 @@
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">5</div>
+                  <div data-timer-minutes-1 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">3</div>
+                  <div data-timer-minutes-2 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
               </div>
@@ -106,13 +106,13 @@
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">1</div>
+                  <div data-timer-seconds-1 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
                 <div class="timer__digit">
                   <div class="timer__digit-point"></div>
                   <div class="timer__digit-line"></div>
-                  <div class="timer__digit-value">8</div>
+                  <div data-timer-seconds-2 class="timer__digit-value">-</div>
                   <div class="timer__digit-point"></div>
                 </div>
               </div>
@@ -819,8 +819,10 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <script src="./assets/js/home-slider.js"></script>
     <script src="./assets/js/tabs.js"></script>
+    <script src="./assets/js/timer.js"></script>
   </div>
 </body>
 
