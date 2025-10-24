@@ -192,6 +192,23 @@ body {
 .header__button:hover {
   background-color: var(--second-color-hover);
 }
+@media (max-width: 500px) {
+  .header__content {
+    padding: 4px 4px 4px 14px;
+    border-radius: 16px;
+  }
+  .header .logo img {
+    max-height: 16px;
+  }
+  .header__media {
+    display: none;
+  }
+  .header__button {
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+}
 
 /* timer */
 .timer {
