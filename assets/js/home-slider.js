@@ -14,5 +14,7 @@
     grabCursor: true,
     // circular scrolling
     loop: true,
+    // prevent snapping
+    freeMode: true,
   })
 })()
