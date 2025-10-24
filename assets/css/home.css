@@ -652,3 +652,39 @@
   border-color: var(--white);
   color: var(--second-color);
 }
+@media (max-width: 500px) {
+  .tariffs__header {
+    padding: 16px 24px 20px 24px;
+    border-radius: 24px 24px 0px 0px;
+  }
+  .tariffs__decor {
+    display: none;
+  }
+  .tariffs__cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .tariffs-card {
+    position: relative;
+  }
+  .tariffs-card::before {
+    --decor-radius: 5px;
+
+    content: '';
+
+    position: absolute;
+    top: calc(0px - var(--decor-radius));
+    left: 0;
+    
+    width: 100%;
+    height: calc(var(--decor-radius) * 2);
+
+    background-image: radial-gradient(circle, black var(--decor-radius), transparent 0px);
+    background-position: calc(0px - var(--decor-radius) * 2) 0;
+    background-size: 20px;
+    background-repeat: repeat-x;
+  }
+  .tariffs-card__footer {
+    grid-template-columns: 1fr;
+  }
+}
