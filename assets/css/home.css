@@ -720,9 +720,24 @@
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: -0.3px;
+
+  position: relative;
 }
-.buy-tickets-modal__control.select .select__control {
-  min-height: 20px;
+textarea.buy-tickets-modal__control {
+  resize: none;
+}
+.file.buy-tickets-modal__control {
+  min-height: 48px;
+}
+.file.buy-tickets-modal__control input {
+  opacity: 0;
+}
+.buy-tickets-modal__control-icon-right {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+
+  right: 14px;
 }
 .buy-tickets-modal-button {
   margin-top: 40px;

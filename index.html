@@ -587,10 +587,10 @@
                 </ul>
               </div>
               <div class="tariffs-card__footer">
-                <a data-modal-toggle="buy-tickets-modal" data-buy-tickets-button data-buy-tickets-tariff="optimal"
-                  data-buy-tickets-client="person" href="#" class="tariffs-card__button primary">Купить билет</a>
-                <a data-modal-toggle="buy-tickets-modal" data-buy-tickets-button data-buy-tickets-tariff="optimal"
-                  data-buy-tickets-client="legal" href="#" class="tariffs-card__button secondary">Билет для юр. лиц</a>
+                <a data-modal-toggle="buy-tickets-modal-person" data-buy-tickets-button="optimal" href="#"
+                  class="tariffs-card__button primary">Купить билет</a>
+                <a data-modal-toggle="buy-tickets-modal-legal" data-buy-tickets-button="optimal" href="#"
+                  class="tariffs-card__button secondary">Билет для юр. лиц</a>
               </div>
             </div>
 
@@ -614,10 +614,10 @@
                 </div>
               </div>
               <div class="tariffs-card__footer">
-                <a data-modal-toggle="buy-tickets-modal" data-buy-tickets-button data-buy-tickets-tariff="vip"
-                  data-buy-tickets-client="legal" href="#" class="tariffs-card__button primary">Купить билет</a>
-                <a data-modal-toggle="buy-tickets-modal" data-buy-tickets-button data-buy-tickets-tariff="vip"
-                  data-buy-tickets-client="legal" href="#" class="tariffs-card__button secondary">Билет для юр. лиц</a>
+                <a data-modal-toggle="buy-tickets-modal-person" data-buy-tickets-button="vip" href="#"
+                  class="tariffs-card__button primary">Купить билет</a>
+                <a data-modal-toggle="buy-tickets-modal-legal" data-buy-tickets-button="vip" href="#"
+                  class="tariffs-card__button secondary">Билет для юр. лиц</a>
               </div>
             </div>
           </div>
@@ -668,7 +668,7 @@
       </div>
     </footer>
 
-    <div id="buy-tickets-modal" data-modal data-tariff="optimal" data-client="person" class="modal buy-tickets-modal">
+    <div id="buy-tickets-modal-person" data-modal class="modal buy-tickets-modal">
       <div data-modal-background class="modal-background">
         <div data-modal-content class="modal-content">
           <div class="modal-header">
@@ -678,127 +678,155 @@
           </div>
 
           <div class="modal-body">
-            <form id="buy-tickets-modal-form" action="#" method="POST" class="buy-tickets-modal__form">
-              <!-- This form is generated in ./assets/js/buy-tickets.js -->
+            <form id="buy-tickets-person-form" action="#" method="POST" class="buy-tickets-modal__form">
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  2. ФИО <span class="required">*</span>
+                </label>
+
+                <input class="buy-tickets-modal__control" placeholder="" type="text">
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  3. Номер телефона <span class="required">*</span>
+                </label>
+
+                <input class="buy-tickets-modal__control" placeholder="+375 (__)___-__-__" type="text">
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  7. Электронная почта <span class="required">*</span>
+                </label>
+
+                <input class="buy-tickets-modal__control" placeholder="" type="email">
+              </div>
+
+              <button class="buy-tickets-modal-button">
+                <div class="buy-tickets-modal-button__text">Купить билет Optimal</div>
+                <div class="buy-tickets-modal-button__price">300 BYN</div>
+              </button>
             </form>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- data from CMS -->
-    <script id="buy-tickets-data" type="application/json">
-      {
-        "tariffs": {
-          "optimal": {
-            "name": "Optimal",
-            "price": 300
-          },
-          "vip": {
-            "name": "VIP",
-            "price": 370
-          }
-        },
-        "clients": {
-          "person": [
-            { 
-              "control": "input", 
-              "type": "text", 
-              "label": "ФИО", 
-              "placeholder": "",
-              "hint": null, 
-              "isRequired": true 
-            },
-            { 
-              "control": "input", 
-              "type": "text", 
-              "label": "Номер телефона", 
-              "placeholder": "+375 (__)___-__-__", 
-              "hint": null,
-              "isRequired": true 
-            },
-            { 
-              "control": "input", 
-              "type": "email", 
-              "label": "Электронная почта", 
-              "placeholder": "", 
-              "hint": null,
-              "isRequired": true 
-            }
-          ],
-          "legal": [
-            { 
-              "control": "input", 
-              "type": "text", 
-              "label": "Компания", 
-              "placeholder": "", 
-              "hint": null,
-              "isRequired": true 
-            },
-            { 
-              "control": "input", 
-              "type": "text", 
-              "label": "ФИО контактного лица", 
-              "placeholder": "", 
-              "hint": null,
-              "isRequired": true 
-            },
-            { 
-              "control": "input", 
-              "type": "text", 
-              "label": "Номер телефона контактного лица", 
-              "placeholder": "+375 (__)___-__-__", 
-              "hint": null,
-              "isRequired": true 
-            },
-            {
-              "control": "select",
-              "label": "Наименование тарифа",
-              "options": [
-                { "value": "1", "label": "Опция 1" },
-                { "value": "2", "label": "Опция 2" },
-                { "value": "3", "label": "Опция 3" }
-              ],
-              "hint": null,
-              "isRequired": true
-            },
-            {
-              "control": "select",
-              "label": "Количество билетов",
-              "options": [
-                { "value": "1", "label": "Опция 1" },
-                { "value": "2", "label": "Опция 2" },
-                { "value": "3", "label": "Опция 3" }
-              ],
-              "hint": null,
-              "isRequired": true
-            },
-            { 
-              "control": "input", 
-              "type": "file", 
-              "label": "Реквизиты", 
-              "placeholder": "", 
-              "hint": "Прикрепить файл",
-              "isRequired": true
-            },
-            { 
-              "control": "input", 
-              "type": "email", 
-              "label": "Электронная почта", 
-              "placeholder": "", 
-              "hint": null,
-              "isRequired": true 
-            },
-            { 
-              "control": "textarea", 
-              "label": "Примечание", 
-              "hint": null,
-              "isRequired": false 
-            }
-          ]
-        }
-      }
-    </script>
+    <div id="buy-tickets-modal-legal" data-modal class="modal buy-tickets-modal">
+      <div data-modal-background class="modal-background">
+        <div data-modal-content class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              Покупка билета
+            </div>
+          </div>
+
+          <div class="modal-body">
+            <form id="buy-tickets-legal-form" action="#" method="POST" class="buy-tickets-modal__form">
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  1. Компания <span class="required">*</span>
+                </label>
+
+                <input class="buy-tickets-modal__control" placeholder="" type="text">
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  2. ФИО контактного лица <span class="required">*</span>
+                </label>
+
+                <input class="buy-tickets-modal__control" placeholder="" type="text">
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  3. Номер телефона контактного лица <span class="required">*</span>
+                </label>
+
+                <input class="buy-tickets-modal__control" placeholder="+375 (__)___-__-__" type="text">
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  4. Наименование тарифа <span class="required">*</span>
+                </label>
+
+                <select class="buy-tickets-modal__control select">
+                  <option value="1" class="select__option">
+                    Опция 1
+                  </option>
+
+                  <option value="2" class="select__option">
+                    Опция 2
+                  </option>
+
+                  <option value="3" class="select__option">
+                    Опция 3
+                  </option>
+                </select>
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  5. Количество билетов <span class="required">*</span>
+                </label>
+
+                <select class="buy-tickets-modal__control select">
+                  <option value="1" class="select__option">
+                    Опция 1
+                  </option>
+
+                  <option value="2" class="select__option">
+                    Опция 2
+                  </option>
+
+                  <option value="3" class="select__option">
+                    Опция 3
+                  </option>
+                </select>
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  6. Реквизиты <span class="required">*</span>
+                </label>
+
+                <label data-upload for="attachment" class="buy-tickets-modal__control file">
+                  <span data-upload-label class="buy-tickets-modal__control-text"></span>
+                  <input data-upload-control id="attachment" placeholder="" type="file" hidden>
+                  <img class="buy-tickets-modal__control-icon-right" src="./assets/img/attachment.svg">
+                </label>
+
+                <div class="buy-tickets-modal__hint">Прикрепить файл</div>
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  7. Электронная почта <span class="required">*</span>
+                </label>
+
+                <input class="buy-tickets-modal__control" placeholder="" type="email">
+              </div>
+
+              <div class="buy-tickets-modal__field">
+                <label class="buy-tickets-modal__label">
+                  8. Примечание
+                </label>
+
+                <textarea class="buy-tickets-modal__control"></textarea>
+              </div>
+
+              <button class="buy-tickets-modal-button">
+                <div class="buy-tickets-modal-button__text">Купить билет Optimal</div>
+                <div class="buy-tickets-modal-button__price">300 BYN</div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
