@@ -681,7 +681,7 @@
             <form id="buy-tickets-person-form" action="#" method="POST" class="buy-tickets-modal__form">
               <div class="buy-tickets-modal__field">
                 <label class="buy-tickets-modal__label">
-                  2. ФИО <span class="required">*</span>
+                  1. ФИО <span class="required">*</span>
                 </label>
 
                 <input class="buy-tickets-modal__control" placeholder="" type="text">
@@ -689,7 +689,7 @@
 
               <div class="buy-tickets-modal__field">
                 <label class="buy-tickets-modal__label">
-                  3. Номер телефона <span class="required">*</span>
+                  2. Номер телефона <span class="required">*</span>
                 </label>
 
                 <input class="buy-tickets-modal__control" placeholder="+375 (__)___-__-__" type="text">
@@ -697,7 +697,7 @@
 
               <div class="buy-tickets-modal__field">
                 <label class="buy-tickets-modal__label">
-                  7. Электронная почта <span class="required">*</span>
+                  3. Электронная почта <span class="required">*</span>
                 </label>
 
                 <input class="buy-tickets-modal__control" placeholder="" type="email">
@@ -828,9 +828,27 @@
       </div>
     </div>
 
+    <div id="cookies" class="cookies">
+      <div class="cookies__content">
+        <div class="container">
+          <div class="cookies__text">
+            Продолжая пользоваться этим сайтом, не изменив настройки своего браузера, <br />
+            вы соглашаетесь с тем, что мы можем использовать файлы cookie. <a href="#">Политика использования</a href>
+          </div>
+
+          <a id="cookies-button" href="#" class="cookies__button">Принять</a>
+        </div>
+
+        <div id="cookies-close" class="cookies__close">
+          <img src="./assets/img/close.svg" alt="">
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- Shared -->
+    <script src="./assets/js/shared/cookies.js"></script>
     <script src="./assets/js/shared/timer.js"></script>
     <script src="./assets/js/shared/collapses.js"></script>
     <script src="./assets/js/shared/tabs.js"></script>
