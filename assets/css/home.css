@@ -688,3 +688,81 @@
     grid-template-columns: 1fr;
   }
 }
+
+.buy-tickets-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.buy-tickets-modal__field {
+  display: flex;
+  flex-direction: column;
+}
+.buy-tickets-modal__label {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.2px;
+}
+.buy-tickets-modal__label .required {
+  color: #E40613;
+}
+.buy-tickets-modal__control {
+  width: 100%;
+  
+  padding: 14px;
+  margin-top: 12px;
+
+  border-radius: 12px;
+  border: 1px solid #00000066;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+}
+.buy-tickets-modal__control.select .select__control {
+  min-height: 20px;
+}
+.buy-tickets-modal-button {
+  margin-top: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  border-radius: 16px;
+  padding: 20px 32px;
+
+  outline: none;
+  border: none;
+
+  background-color: var(--second-color);
+  color: var(--white);
+
+  transition: 0.3s;
+}
+.buy-tickets-modal-button:hover {
+  background-color: var(--second-color-hover);
+}
+.buy-tickets-modal-button__text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 600;
+}
+.buy-tickets-modal-button__price {
+  font-weight: 730;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--accent-color);
+  letter-spacing: -0.5px;
+}
+.buy-tickets-modal__hint {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.2;
+  color: var(--black);
+  opacity: 0.6;
+}
