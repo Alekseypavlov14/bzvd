@@ -5,6 +5,11 @@
     pagination: {
       el: '.swiper-pagination',
     },
+    // adds navigation
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
     // additional settings
     slidesPerView: 'auto',
